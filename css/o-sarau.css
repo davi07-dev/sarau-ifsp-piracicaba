@@ -1,0 +1,2437 @@
+/* =========================================================
+   O SARAU — PÁGINA
+   Identidade visual editorial / cinematográfica
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+.sarau-page {
+    --sarau-black: #08080d;
+    --sarau-black-soft: #0d0c13;
+    --sarau-wine: #351522;
+    --sarau-wine-light: #5a273b;
+    --sarau-purple: #3d3159;
+    --sarau-purple-light: #79648f;
+    --sarau-cream: #eee7da;
+    --sarau-cream-soft: #cfc5b5;
+    --sarau-gold: #b59a68;
+    --sarau-gray: #98919a;
+    --sarau-line: rgba(238, 231, 218, 0.14);
+
+    background: var(--sarau-black);
+    color: var(--sarau-cream);
+}
+
+.sarau-page *,
+.sarau-page *::before,
+.sarau-page *::after {
+    box-sizing: border-box;
+}
+
+.sarau-container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sarau-section-label {
+    display: block;
+    margin-bottom: 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+
+    color: var(--sarau-gold);
+}
+
+.sarau-section-heading {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.sarau-section-number {
+    padding-top: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4.2rem;
+    line-height: 0.8;
+    font-weight: 400;
+
+    color: rgba(181, 154, 104, 0.34);
+}
+
+.sarau-section-heading h2 {
+    max-width: 780px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 5vw, 5.3rem);
+    line-height: 0.92;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-section-heading h2 em {
+    font-style: italic;
+    color: var(--sarau-gold);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sarau-page-hero {
+    position: relative;
+    min-height: 760px;
+    height: min(92vh, 900px);
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(87, 47, 67, 0.32),
+            transparent 38%
+        ),
+        #08080d;
+}
+
+.sarau-hero-media,
+.sarau-hero-image,
+.sarau-hero-overlay,
+.sarau-hero-vignette {
+    position: absolute;
+    inset: 0;
+}
+
+.sarau-hero-media {
+    z-index: 0;
+}
+
+.sarau-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        saturate(0.68)
+        contrast(1.08)
+        brightness(0.67);
+
+    transform: scale(1.025);
+}
+
+.sarau-hero-overlay {
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 13, 0.94) 0%,
+            rgba(8, 8, 13, 0.72) 35%,
+            rgba(8, 8, 13, 0.27) 72%,
+            rgba(8, 8, 13, 0.58) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(8, 8, 13, 0.88) 0%,
+            transparent 30%,
+            rgba(8, 8, 13, 0.3) 100%
+        );
+}
+
+.sarau-hero-vignette {
+    z-index: 2;
+
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 180px rgba(0, 0, 0, 0.7);
+}
+
+.sarau-hero-content {
+    position: relative;
+    z-index: 4;
+
+    width: min(1180px, calc(100% - 80px));
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 90px;
+}
+
+.sarau-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    width: fit-content;
+    margin-bottom: 25px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: rgba(238, 231, 218, 0.75);
+}
+
+.sarau-hero-eyebrow::before {
+    content: "";
+
+    width: 34px;
+    height: 1px;
+
+    background: var(--sarau-gold);
+}
+
+.sarau-hero-title {
+    max-width: 850px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(5.5rem, 12vw, 11rem);
+    line-height: 0.76;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+
+    color: var(--sarau-cream);
+
+    text-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.sarau-hero-line {
+    width: 310px;
+    margin: 32px 0 26px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sarau-hero-line span {
+    height: 1px;
+    flex: 1;
+
+    background: linear-gradient(
+        90deg,
+        var(--sarau-gold),
+        rgba(181, 154, 104, 0)
+    );
+}
+
+.sarau-hero-line span:last-child {
+    background: linear-gradient(
+        90deg,
+        rgba(181, 154, 104, 0),
+        var(--sarau-gold)
+    );
+}
+
+.sarau-hero-line i {
+    font-family: serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--sarau-gold);
+}
+
+.sarau-hero-subtitle {
+    max-width: 540px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    line-height: 1.25;
+
+    color: rgba(238, 231, 218, 0.84);
+}
+
+.sarau-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+
+    margin-top: 54px;
+}
+
+.sarau-hero-meta div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sarau-hero-meta div:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    right: -25px;
+
+    width: 1px;
+    height: 40px;
+
+    background: rgba(238, 231, 218, 0.2);
+}
+
+.sarau-hero-meta span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    color: var(--sarau-gold);
+}
+
+.sarau-hero-meta strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-hero-scroll {
+    position: absolute;
+    z-index: 5;
+
+    left: 50%;
+    bottom: 28px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.54rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    color: rgba(238, 231, 218, 0.58);
+}
+
+.sarau-hero-scroll i {
+    display: block;
+
+    width: 1px;
+    height: 38px;
+
+    background: linear-gradient(
+        var(--sarau-gold),
+        transparent
+    );
+}
+
+
+/* =========================================================
+   DEFINIÇÃO
+========================================================= */
+
+.sarau-definition {
+    position: relative;
+
+    padding: 150px 0 165px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 82% 50%,
+            rgba(67, 40, 57, 0.2),
+            transparent 34%
+        ),
+        var(--sarau-black);
+}
+
+.sarau-definition::before {
+    content: "SARAU";
+
+    position: absolute;
+    top: 90px;
+    right: -50px;
+
+    font-family: "Cinzel", serif;
+    font-size: 13rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+
+    color: rgba(238, 231, 218, 0.018);
+
+    pointer-events: none;
+}
+
+.sarau-definition-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 100px;
+
+    margin-top: 85px;
+
+    align-items: center;
+}
+
+.sarau-definition-text {
+    max-width: 570px;
+}
+
+.sarau-definition-text p {
+    margin: 0 0 24px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.94rem;
+    line-height: 1.95;
+
+    color: rgba(238, 231, 218, 0.68);
+}
+
+.sarau-definition-text .sarau-lead {
+    margin-bottom: 35px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    line-height: 1.12;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-definition-visual {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.definition-word {
+    position: relative;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.3rem, 6vw, 6rem);
+    line-height: 0.82;
+    font-weight: 500;
+    letter-spacing: -0.045em;
+
+    color: var(--sarau-cream);
+}
+
+.definition-word::before {
+    content: "";
+
+    position: absolute;
+    left: -26px;
+    bottom: -8px;
+
+    width: 70px;
+    height: 1px;
+
+    background: var(--sarau-gold);
+
+    transform: rotate(-4deg);
+}
+
+.definition-word-2 {
+    margin-left: 105px;
+    color: var(--sarau-gold);
+}
+
+.definition-word-3 {
+    margin-left: -60px;
+}
+
+.definition-arrow {
+    margin: 24px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+
+    color: rgba(181, 154, 104, 0.45);
+}
+
+
+/* =========================================================
+   PROPÓSITO
+========================================================= */
+
+.sarau-purpose {
+    position: relative;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #1b1118;
+}
+
+.sarau-purpose-image {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+}
+
+.sarau-purpose-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        grayscale(0.35)
+        saturate(0.7)
+        contrast(1.12)
+        brightness(0.5);
+}
+
+.sarau-purpose-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22, 12, 18, 0.96) 0%,
+            rgba(22, 12, 18, 0.9) 35%,
+            rgba(22, 12, 18, 0.58) 67%,
+            rgba(22, 12, 18, 0.3) 100%
+        );
+}
+
+.sarau-purpose-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 700px;
+
+    padding: 120px 0;
+}
+
+.sarau-purpose-content h2 {
+    max-width: 700px;
+    margin: 0 0 34px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.4rem, 6vw, 6rem);
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-purpose-divider {
+    width: 100px;
+    height: 1px;
+    margin-bottom: 32px;
+
+    background: rgba(181, 154, 104, 0.3);
+}
+
+.sarau-purpose-divider span {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    background: var(--sarau-gold);
+}
+
+.sarau-purpose-content p {
+    max-width: 620px;
+    margin: 0 0 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.72);
+}
+
+
+/* =========================================================
+   HISTÓRIA
+========================================================= */
+
+.sarau-history {
+    position: relative;
+
+    padding: 150px 0 180px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c0b10 0%,
+            #14101a 55%,
+            #100c12 100%
+        );
+
+    overflow: hidden;
+}
+
+.sarau-history::after {
+    content: "2016";
+
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18rem;
+    line-height: 1;
+
+    color: rgba(181, 154, 104, 0.025);
+
+    pointer-events: none;
+}
+
+.sarau-history-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    max-width: 930px;
+
+    margin: 75px 0 100px 114px;
+}
+
+.sarau-history-intro p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.68);
+}
+
+.sarau-history-intro strong {
+    color: var(--sarau-cream);
+    font-weight: 600;
+}
+
+.sarau-timeline {
+    position: relative;
+
+    max-width: 950px;
+    margin-left: 114px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.sarau-timeline-line {
+    position: absolute;
+
+    top: 8px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--sarau-gold),
+            rgba(181, 154, 104, 0.15)
+        );
+}
+
+.sarau-timeline-item {
+    position: relative;
+    padding-top: 55px;
+}
+
+.sarau-timeline-marker {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+
+    border: 1px solid var(--sarau-gold);
+    border-radius: 50%;
+
+    background: var(--sarau-black-soft);
+}
+
+.sarau-timeline-marker span {
+    position: absolute;
+    inset: 4px;
+
+    border-radius: 50%;
+
+    background: var(--sarau-gold);
+}
+
+.sarau-timeline-year {
+    display: block;
+    margin-bottom: 13px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    color: var(--sarau-gold);
+}
+
+.sarau-timeline-content h3 {
+    margin: 0 0 14px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.25rem;
+    line-height: 1;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-timeline-content p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: rgba(238, 231, 218, 0.58);
+}
+
+
+/* =========================================================
+   EXPRESSÕES
+========================================================= */
+
+.sarau-expressions {
+    position: relative;
+
+    padding: 150px 0 180px;
+
+    background: #08080d;
+
+    overflow: hidden;
+}
+
+.sarau-expressions::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 12%;
+
+    width: 1px;
+    height: 100%;
+
+    background: linear-gradient(
+        transparent,
+        rgba(181, 154, 104, 0.12),
+        transparent
+    );
+}
+
+.sarau-section-heading-centered {
+    align-items: center;
+}
+
+.sarau-expressions-intro {
+    max-width: 530px;
+    margin: 45px 0 70px 114px;
+}
+
+.sarau-expressions-intro p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    line-height: 1.45;
+
+    color: rgba(238, 231, 218, 0.65);
+}
+
+.sarau-expression-gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+.expression-card {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: #131118;
+
+    grid-column: span 4;
+}
+
+.expression-card-large {
+    min-height: 650px;
+
+    grid-column: span 5;
+}
+
+.expression-card-wide {
+    min-height: 540px;
+
+    grid-column: span 4;
+}
+
+.expression-card-final {
+    min-height: 500px;
+
+    grid-column: span 3;
+}
+
+.expression-card-image {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.expression-card-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 8, 13, 0.05) 20%,
+            rgba(8, 8, 13, 0.18) 40%,
+            rgba(8, 8, 13, 0.94) 100%
+        );
+}
+
+.expression-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.72)
+        contrast(1.06)
+        brightness(0.78);
+
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1),
+        filter 0.8s ease;
+}
+
+.expression-card:hover .expression-card-image img {
+    transform: scale(1.06);
+
+    filter:
+        saturate(0.92)
+        contrast(1.04)
+        brightness(0.88);
+}
+
+.expression-card-content {
+    position: absolute;
+    z-index: 2;
+
+    left: 30px;
+    right: 30px;
+    bottom: 28px;
+}
+
+.expression-card-content > span {
+    display: block;
+    margin-bottom: 9px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+
+    color: var(--sarau-gold);
+}
+
+.expression-card-content h3 {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.3rem, 4vw, 3.7rem);
+    line-height: 0.9;
+    font-weight: 500;
+
+    color: var(--sarau-cream);
+}
+
+.expression-card-content p {
+    max-width: 300px;
+
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.73rem;
+    line-height: 1.65;
+
+    color: rgba(238, 231, 218, 0.65);
+}
+
+
+/* =========================================================
+   EQUIPE / TURMA
+========================================================= */
+
+.sarau-team {
+    position: relative;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #0d0c12;
+}
+
+.sarau-team-image {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+}
+
+.sarau-team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        saturate(0.65)
+        contrast(1.08)
+        brightness(0.58);
+}
+
+.sarau-team-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 13, 0.97) 0%,
+            rgba(8, 8, 13, 0.88) 34%,
+            rgba(8, 8, 13, 0.46) 70%,
+            rgba(8, 8, 13, 0.22) 100%
+        );
+}
+
+.sarau-team-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 620px;
+
+    padding: 120px 0;
+}
+
+.sarau-team-content h2 {
+    margin: 0 0 30px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.5rem, 6vw, 6.2rem);
+    line-height: 0.88;
+    font-weight: 500;
+    letter-spacing: -0.045em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-team-content p {
+    max-width: 580px;
+
+    margin: 0 0 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.68);
+}
+
+.sarau-team-content .button {
+    margin-top: 24px;
+}
+
+
+/* =========================================================
+   BURTON
+========================================================= */
+
+.sarau-burton {
+    position: relative;
+
+    padding: 160px 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(62, 46, 88, 0.3),
+            transparent 35%
+        ),
+        #0d0b12;
+
+    overflow: hidden;
+}
+
+.sarau-burton::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+
+    width: 1px;
+    height: 80%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(121, 100, 143, 0.16),
+            transparent
+        );
+}
+
+.sarau-burton-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 110px;
+
+    align-items: center;
+}
+
+.sarau-burton-visual {
+    position: relative;
+    padding: 25px;
+}
+
+.sarau-burton-frame {
+    position: relative;
+
+    aspect-ratio: 0.84;
+
+    overflow: hidden;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+.sarau-burton-frame::before {
+    content: "";
+
+    position: absolute;
+    inset: 14px;
+
+    border: 1px solid rgba(238, 231, 218, 0.2);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.sarau-burton-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        saturate(0.62)
+        contrast(1.08)
+        brightness(0.76);
+}
+
+.sarau-burton-note {
+    position: absolute;
+
+    right: -4px;
+    bottom: 2px;
+
+    padding: 14px 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+
+    color: var(--sarau-cream);
+
+    background: var(--sarau-purple);
+
+    transform: rotate(3deg);
+}
+
+.sarau-burton-content {
+    max-width: 550px;
+}
+
+.sarau-burton-content h2 {
+    margin: 0 0 30px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.4rem, 5.4vw, 5.7rem);
+    line-height: 0.88;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-burton-content p {
+    margin: 0 0 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.87rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.64);
+}
+
+.sarau-burton-content .button {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   CHEGANDO AO SARAU
+========================================================= */
+
+.sarau-arrival {
+    position: relative;
+
+    padding: 150px 0 165px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #121015,
+            #0a090e
+        );
+
+    overflow: hidden;
+}
+
+.sarau-arrival::before {
+    content: "04";
+
+    position: absolute;
+
+    top: 30px;
+    right: 60px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18rem;
+    line-height: 1;
+
+    color: rgba(181, 154, 104, 0.025);
+}
+
+.sarau-arrival-intro {
+    max-width: 700px;
+    margin: 55px 0 65px 114px;
+}
+
+.sarau-arrival-intro p {
+    margin: 0 0 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.65);
+}
+
+.sarau-arrival-intro strong {
+    color: var(--sarau-cream);
+}
+
+.sarau-arrival-video {
+    position: relative;
+
+    margin: 0 auto 90px;
+
+    max-width: 1080px;
+
+    background: #050507;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.4);
+}
+
+.arrival-video {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 7;
+
+    object-fit: cover;
+
+    background: #050507;
+}
+
+.arrival-video-label {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 12px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.53rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+
+    color: rgba(238, 231, 218, 0.75);
+
+    background: rgba(8, 8, 13, 0.78);
+
+    backdrop-filter: blur(10px);
+}
+
+.arrival-video-label i {
+    color: var(--sarau-gold);
+    font-style: normal;
+}
+
+.arrival-video-label strong {
+    color: var(--sarau-cream);
+    font-weight: 600;
+}
+
+.sarau-arrival-location {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 85px;
+
+    align-items: center;
+}
+
+.arrival-location-image {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 1.25;
+}
+
+.arrival-location-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(181, 154, 104, 0.05),
+            transparent 45%
+        );
+}
+
+.arrival-location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        saturate(0.65)
+        contrast(1.08)
+        brightness(0.72);
+}
+
+.arrival-location-tag {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    z-index: 2;
+
+    padding: 10px 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.52rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+
+    color: var(--sarau-black);
+
+    background: var(--sarau-cream);
+}
+
+.arrival-location-content h3 {
+    max-width: 500px;
+
+    margin: 0 0 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 5vw, 5.3rem);
+    line-height: 0.9;
+    font-weight: 500;
+
+    color: var(--sarau-cream);
+}
+
+.arrival-location-content > p {
+    max-width: 480px;
+
+    margin: 0 0 35px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.8;
+
+    color: rgba(238, 231, 218, 0.62);
+}
+
+.arrival-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--sarau-line);
+}
+
+.arrival-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.arrival-details span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.54rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+
+    color: var(--sarau-gold);
+}
+
+.arrival-details strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.73rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    color: var(--sarau-cream);
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.sarau-map-section {
+    padding: 135px 0 150px;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(60, 48, 83, 0.2),
+            transparent 32%
+        ),
+        #08080d;
+}
+
+.sarau-map-header {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 100px;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+.sarau-map-header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.2rem, 5vw, 5.3rem);
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-map-header > p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.77rem;
+    line-height: 1.8;
+
+    color: rgba(238, 231, 218, 0.57);
+}
+
+.sarau-map-layout {
+    display: grid;
+    grid-template-columns: 0.75fr 1.5fr;
+
+    min-height: 510px;
+
+    border: 1px solid rgba(238, 231, 218, 0.09);
+
+    background: #111016;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.sarau-map-info {
+    position: relative;
+
+    padding: 55px 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid rgba(238, 231, 218, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            #18141c,
+            #100e14
+        );
+}
+
+.map-info-mark {
+    margin-bottom: 45px;
+
+    font-family: serif;
+    font-size: 1.3rem;
+
+    color: var(--sarau-gold);
+}
+
+.sarau-map-info h3 {
+    max-width: 300px;
+
+    margin: 0 0 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.7rem;
+    line-height: 0.95;
+    font-weight: 500;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-map-info > p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.9;
+
+    color: rgba(238, 231, 218, 0.56);
+}
+
+.map-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 45px;
+}
+
+.map-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 52px;
+    padding: 0 18px;
+
+    border: 1px solid rgba(238, 231, 218, 0.14);
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.map-action span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+
+    color: var(--sarau-cream);
+}
+
+.map-action strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    color: var(--sarau-gold);
+}
+
+.map-action:hover {
+    border-color: rgba(181, 154, 104, 0.55);
+
+    background: rgba(181, 154, 104, 0.06);
+
+    transform: translateX(4px);
+}
+
+.sarau-map-frame {
+    min-height: 510px;
+
+    background: #17151a;
+}
+
+.sarau-map-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 510px;
+
+    border: 0;
+
+    filter:
+        grayscale(0.15)
+        contrast(1.05);
+}
+
+
+/* =========================================================
+   PARTICIPAR
+========================================================= */
+
+.sarau-participate {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #25121b;
+}
+
+.sarau-participate-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(116, 64, 91, 0.32),
+            transparent 36%
+        ),
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(53, 39, 73, 0.25),
+            transparent 30%
+        );
+}
+
+.sarau-participate::before,
+.sarau-participate::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(238, 231, 218, 0.06);
+
+    border-radius: 50%;
+}
+
+.sarau-participate::before {
+    width: 550px;
+    height: 550px;
+
+    right: -190px;
+    top: -170px;
+}
+
+.sarau-participate::after {
+    width: 350px;
+    height: 350px;
+
+    left: -170px;
+    bottom: -170px;
+}
+
+.sarau-participate-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+
+    padding: 110px 0;
+}
+
+.sarau-participate-content h2 {
+    max-width: 700px;
+
+    margin: 0 0 28px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.82;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+
+    color: var(--sarau-cream);
+}
+
+.sarau-participate-content > p {
+    max-width: 530px;
+
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    line-height: 1.35;
+
+    color: rgba(238, 231, 218, 0.72);
+}
+
+.sarau-participate-meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin: 45px 0 32px;
+}
+
+.sarau-participate-meta span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.59rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+
+    color: var(--sarau-gold);
+}
+
+.sarau-participate-meta i {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(238, 231, 218, 0.3);
+}
+
+.sarau-final-button {
+    min-width: 210px;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.sarau-page .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+
+    min-height: 50px;
+    padding: 0 23px;
+
+    border: 1px solid rgba(238, 231, 218, 0.3);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: var(--sarau-cream);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.sarau-page .button span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.sarau-page .button-outline:hover {
+    border-color: var(--sarau-gold);
+
+    color: var(--sarau-black);
+
+    background: var(--sarau-cream);
+
+    transform: translateY(-2px);
+}
+
+.sarau-page .button-primary {
+    border-color: var(--sarau-gold);
+
+    color: var(--sarau-black);
+
+    background: var(--sarau-gold);
+}
+
+.sarau-page .button-primary:hover {
+    background: var(--sarau-cream);
+    border-color: var(--sarau-cream);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ANIMAÇÕES DE ENTRADA
+========================================================= */
+
+@keyframes sarauFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sarau-hero-eyebrow {
+    animation: sarauFadeUp 0.9s ease both;
+}
+
+.sarau-hero-title {
+    animation: sarauFadeUp 1s 0.08s ease both;
+}
+
+.sarau-hero-line,
+.sarau-hero-subtitle {
+    animation: sarauFadeUp 1s 0.16s ease both;
+}
+
+.sarau-hero-meta {
+    animation: sarauFadeUp 1s 0.24s ease both;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 1100PX
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sarau-container,
+    .sarau-hero-content {
+        width: min(100% - 60px, 1000px);
+    }
+
+    .sarau-definition-grid {
+        gap: 55px;
+    }
+
+    .sarau-burton-grid {
+        gap: 65px;
+    }
+
+    .sarau-arrival-location {
+        gap: 55px;
+    }
+
+    .sarau-map-header {
+        gap: 55px;
+    }
+
+    .sarau-map-layout {
+        grid-template-columns: 0.85fr 1.35fr;
+    }
+
+    .sarau-map-info {
+        padding: 45px 35px;
+    }
+
+    .expression-card {
+        min-height: 460px;
+    }
+
+    .expression-card-large {
+        min-height: 580px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 900PX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sarau-container,
+    .sarau-hero-content {
+        width: min(100% - 44px, 760px);
+    }
+
+    .sarau-page-hero {
+        min-height: 700px;
+        height: auto;
+    }
+
+    .sarau-hero-content {
+        min-height: 700px;
+
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+
+    .sarau-hero-title {
+        font-size: clamp(5rem, 15vw, 8rem);
+    }
+
+    .sarau-hero-meta {
+        gap: 28px;
+    }
+
+    .sarau-hero-meta div:not(:last-child)::after {
+        display: none;
+    }
+
+    .sarau-definition,
+    .sarau-history,
+    .sarau-expressions,
+    .sarau-burton,
+    .sarau-arrival {
+        padding: 110px 0 120px;
+    }
+
+    .sarau-definition-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+
+        margin-top: 60px;
+    }
+
+    .sarau-definition-visual {
+        min-height: 360px;
+    }
+
+    .sarau-purpose {
+        min-height: 650px;
+    }
+
+    .sarau-purpose-content {
+        padding: 100px 0;
+    }
+
+    .sarau-history-intro,
+    .sarau-timeline {
+        margin-left: 0;
+    }
+
+    .sarau-history-intro {
+        gap: 45px;
+    }
+
+    .sarau-timeline {
+        gap: 30px;
+    }
+
+    .sarau-expression-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .expression-card,
+    .expression-card-large,
+    .expression-card-wide,
+    .expression-card-final {
+        grid-column: span 1;
+
+        min-height: 500px;
+    }
+
+    .expression-card-large {
+        grid-row: span 1;
+    }
+
+    .sarau-team {
+        min-height: 650px;
+    }
+
+    .sarau-burton-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sarau-burton-visual {
+        max-width: 580px;
+    }
+
+    .sarau-burton-content {
+        max-width: 650px;
+    }
+
+    .sarau-arrival-location {
+        grid-template-columns: 1fr;
+    }
+
+    .arrival-location-image {
+        max-width: 700px;
+    }
+
+    .sarau-map-header {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sarau-map-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sarau-map-info {
+        border-right: 0;
+        border-bottom: 1px solid rgba(238, 231, 218, 0.08);
+    }
+
+    .map-actions {
+        flex-direction: row;
+    }
+
+    .map-action {
+        flex: 1;
+    }
+
+    .sarau-map-frame,
+    .sarau-map-frame iframe {
+        min-height: 420px;
+    }
+
+    .sarau-participate {
+        min-height: 600px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 650PX
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .sarau-container,
+    .sarau-hero-content {
+        width: calc(100% - 34px);
+    }
+
+    .sarau-section-heading {
+        grid-template-columns: 48px 1fr;
+        gap: 13px;
+    }
+
+    .sarau-section-number {
+        padding-top: 4px;
+
+        font-size: 2.7rem;
+    }
+
+    .sarau-section-heading h2 {
+        font-size: clamp(2.8rem, 12vw, 4rem);
+    }
+
+    .sarau-page-hero {
+        min-height: 680px;
+    }
+
+    .sarau-hero-content {
+        min-height: 680px;
+
+        padding-top: 115px;
+        padding-bottom: 90px;
+    }
+
+    .sarau-hero-eyebrow {
+        font-size: 0.57rem;
+        letter-spacing: 0.18em;
+    }
+
+    .sarau-hero-title {
+        font-size: clamp(4.8rem, 22vw, 7rem);
+    }
+
+    .sarau-hero-line {
+        width: 190px;
+        margin: 25px 0 22px;
+    }
+
+    .sarau-hero-subtitle {
+        max-width: 340px;
+
+        font-size: 1.3rem;
+    }
+
+    .sarau-hero-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+
+        margin-top: 38px;
+    }
+
+    .sarau-hero-meta div:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .sarau-hero-meta strong {
+        font-size: 0.64rem;
+    }
+
+    .sarau-hero-scroll {
+        display: none;
+    }
+
+    .sarau-definition,
+    .sarau-history,
+    .sarau-expressions,
+    .sarau-burton,
+    .sarau-arrival,
+    .sarau-map-section {
+        padding: 90px 0 100px;
+    }
+
+    .sarau-definition::before {
+        font-size: 7rem;
+    }
+
+    .sarau-definition-grid {
+        margin-top: 50px;
+        gap: 50px;
+    }
+
+    .sarau-definition-text .sarau-lead {
+        font-size: 2rem;
+    }
+
+    .sarau-definition-text p {
+        font-size: 0.8rem;
+    }
+
+    .sarau-definition-visual {
+        min-height: 290px;
+
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .definition-word {
+        font-size: clamp(2.9rem, 14vw, 4.5rem);
+    }
+
+    .definition-word-2 {
+        margin-left: 35px;
+    }
+
+    .definition-word-3 {
+        margin-left: 0;
+    }
+
+    .definition-arrow {
+        margin: 18px 0 18px 30px;
+    }
+
+    .sarau-purpose {
+        min-height: 700px;
+    }
+
+    .sarau-purpose-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(22, 12, 18, 0.95),
+                rgba(22, 12, 18, 0.76)
+            );
+    }
+
+    .sarau-purpose-content {
+        padding: 90px 0;
+    }
+
+    .sarau-purpose-content h2 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .sarau-purpose-content p {
+        font-size: 0.79rem;
+    }
+
+    .sarau-history-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-top: 50px;
+        margin-bottom: 65px;
+    }
+
+    .sarau-history-intro p {
+        font-size: 0.8rem;
+    }
+
+    .sarau-timeline {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .sarau-timeline-line {
+        top: 8px;
+        bottom: 8px;
+        left: 7px;
+
+        width: 1px;
+        height: auto;
+    }
+
+    .sarau-timeline-item {
+        padding-top: 0;
+        padding-left: 45px;
+    }
+
+    .sarau-timeline-marker {
+        top: 2px;
+        left: 0;
+    }
+
+    .sarau-expressions-intro {
+        margin: 38px 0 50px;
+    }
+
+    .sarau-expressions-intro p {
+        font-size: 1.25rem;
+    }
+
+    .sarau-expression-gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .expression-card,
+    .expression-card-large,
+    .expression-card-wide,
+    .expression-card-final {
+        min-height: 450px;
+    }
+
+    .expression-card-content {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .expression-card-content h3 {
+        font-size: 3rem;
+    }
+
+    .sarau-team {
+        min-height: 690px;
+    }
+
+    .sarau-team-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8, 8, 13, 0.95),
+                rgba(8, 8, 13, 0.72)
+            );
+    }
+
+    .sarau-team-content {
+        padding: 90px 0;
+    }
+
+    .sarau-team-content h2 {
+        font-size: clamp(3.2rem, 14vw, 5rem);
+    }
+
+    .sarau-team-content p {
+        font-size: 0.79rem;
+    }
+
+    .sarau-burton-grid {
+        gap: 65px;
+    }
+
+    .sarau-burton-visual {
+        padding: 15px;
+    }
+
+    .sarau-burton-frame {
+        aspect-ratio: 0.82;
+    }
+
+    .sarau-burton-note {
+        right: -3px;
+        bottom: -2px;
+
+        font-size: 0.46rem;
+    }
+
+    .sarau-burton-content h2 {
+        font-size: clamp(3rem, 13vw, 4.8rem);
+    }
+
+    .sarau-burton-content p {
+        font-size: 0.79rem;
+    }
+
+    .sarau-arrival-intro {
+        margin: 40px 0 50px;
+    }
+
+    .sarau-arrival-intro p {
+        font-size: 0.8rem;
+    }
+
+    .sarau-arrival-video {
+        margin-bottom: 55px;
+    }
+
+    .arrival-video {
+        aspect-ratio: 4 / 5;
+    }
+
+    .arrival-video-label {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+
+        flex-wrap: wrap;
+        gap: 7px;
+
+        padding: 9px;
+
+        font-size: 0.43rem;
+    }
+
+    .arrival-location-image {
+        aspect-ratio: 1;
+    }
+
+    .arrival-location-content h3 {
+        font-size: clamp(3rem, 14vw, 4.7rem);
+    }
+
+    .arrival-location-content > p {
+        font-size: 0.79rem;
+    }
+
+    .arrival-details {
+        gap: 15px;
+    }
+
+    .arrival-details strong {
+        font-size: 0.64rem;
+    }
+
+    .sarau-map-header {
+        margin-bottom: 45px;
+    }
+
+    .sarau-map-header h2 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .sarau-map-header > p {
+        font-size: 0.74rem;
+    }
+
+    .sarau-map-layout {
+        min-height: 0;
+    }
+
+    .sarau-map-info {
+        padding: 38px 25px;
+    }
+
+    .map-info-mark {
+        margin-bottom: 30px;
+    }
+
+    .sarau-map-info h3 {
+        font-size: 2.4rem;
+    }
+
+    .map-actions {
+        flex-direction: column;
+
+        padding-top: 35px;
+    }
+
+    .sarau-map-frame,
+    .sarau-map-frame iframe {
+        min-height: 360px;
+    }
+
+    .sarau-participate {
+        min-height: 650px;
+    }
+
+    .sarau-participate-content {
+        padding: 90px 0;
+    }
+
+    .sarau-participate-content h2 {
+        font-size: clamp(3.7rem, 17vw, 5.7rem);
+    }
+
+    .sarau-participate-content > p {
+        font-size: 1.25rem;
+    }
+
+    .sarau-participate-meta {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 35px;
+    }
+
+    .sarau-participate-meta i {
+        display: none;
+    }
+
+    .sarau-final-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 400PX
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .sarau-container,
+    .sarau-hero-content {
+        width: calc(100% - 28px);
+    }
+
+    .sarau-hero-title {
+        font-size: 4.5rem;
+    }
+
+    .sarau-hero-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .sarau-hero-meta div:last-child {
+        grid-column: auto;
+    }
+
+    .sarau-section-heading {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .sarau-section-number {
+        font-size: 2.3rem;
+    }
+
+    .sarau-section-heading h2 {
+        font-size: 2.7rem;
+    }
+
+    .definition-word {
+        font-size: 2.7rem;
+    }
+
+    .definition-word-2 {
+        margin-left: 20px;
+    }
+
+    .sarau-purpose-content h2,
+    .sarau-team-content h2,
+    .sarau-burton-content h2,
+    .arrival-location-content h3,
+    .sarau-map-header h2 {
+        font-size: 2.9rem;
+    }
+
+    .sarau-participate-content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE / REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sarau-page *,
+    .sarau-page *::before,
+    .sarau-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

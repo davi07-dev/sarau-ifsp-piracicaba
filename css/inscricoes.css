@@ -1,0 +1,1314 @@
+/* =========================================================
+   INSCRIÇÕES — PÁGINA
+========================================================= */
+
+.inscricoes-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.inscricoes-hero {
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #08070d;
+}
+
+.inscricoes-hero-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        url("../img/home/hero.jpg")
+        center / cover no-repeat;
+
+    transform: scale(1.03);
+}
+
+.inscricoes-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 5, 9, 0.42),
+            rgba(5, 5, 9, 0.62),
+            rgba(5, 5, 9, 0.92)
+        ),
+        linear-gradient(
+            90deg,
+            rgba(8, 5, 12, 0.72),
+            rgba(8, 5, 12, 0.20),
+            rgba(8, 5, 12, 0.72)
+        );
+}
+
+.inscricoes-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(850px, calc(100% - 40px));
+
+    padding-top: 70px;
+
+    text-align: center;
+}
+
+.inscricoes-eyebrow {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--gold, #c7a66a);
+
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.28em;
+}
+
+.inscricoes-hero h1 {
+    margin: 0;
+
+    color: #eee7dc;
+
+    font-family: var(--font-title);
+    font-size: clamp(3.3rem, 8vw, 6rem);
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.inscricoes-hero p {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    color: rgba(239, 232, 222, 0.76);
+
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+.inscricoes-ornament {
+    display: flex;
+    align-items: center;
+
+    width: 180px;
+
+    margin: 30px auto 0;
+
+    gap: 12px;
+}
+
+.inscricoes-ornament span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(193, 158, 92, 0.65)
+        );
+}
+
+.inscricoes-ornament span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(193, 158, 92, 0.65),
+            transparent
+        );
+}
+
+.inscricoes-ornament strong {
+    color: var(--gold, #c7a66a);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.inscricoes-intro {
+    position: relative;
+
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(91, 39, 91, 0.15),
+            transparent 35%
+        ),
+        #08070d;
+}
+
+.inscricoes-intro .inscricoes-container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.65fr);
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.inscricoes-intro-content {
+    max-width: 600px;
+}
+
+.inscricoes-intro-content .section-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold, #c7a66a);
+
+    font-family: var(--font-body);
+    font-size: 0.67rem;
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+}
+
+.inscricoes-intro-content .section-title {
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+}
+
+.inscricoes-intro-content .section-ornament {
+    display: flex;
+    align-items: center;
+
+    width: 145px;
+
+    margin-bottom: 30px;
+
+    gap: 12px;
+}
+
+.inscricoes-intro-content .section-ornament span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(193, 158, 92, 0.55)
+        );
+}
+
+.inscricoes-intro-content .section-ornament span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(193, 158, 92, 0.55),
+            transparent
+        );
+}
+
+.inscricoes-intro-content .section-ornament strong {
+    color: var(--gold, #c7a66a);
+}
+
+.inscricoes-intro-content p {
+    color: rgba(232, 227, 220, 0.64);
+
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+
+    line-height: 1.9;
+}
+
+.inscricoes-highlight {
+    margin-bottom: 18px;
+
+    color: #e8dfd4 !important;
+
+    font-family: var(--font-title) !important;
+    font-size: 1.18rem !important;
+}
+
+
+/* =========================================================
+   CARDS DE INFORMAÇÃO
+========================================================= */
+
+.inscricoes-info {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+}
+
+.inscricao-info-card {
+    position: relative;
+
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 16, 28, 0.95),
+            rgba(10, 9, 16, 0.95)
+        );
+
+    border: 1px solid rgba(193, 158, 92, 0.18);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.inscricao-info-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid rgba(193, 158, 92, 0.05);
+
+    pointer-events: none;
+}
+
+.inscricao-info-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(193, 158, 92, 0.36);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.info-card-icon {
+    margin-bottom: 16px;
+
+    color: var(--gold, #c7a66a);
+
+    font-size: 1.25rem;
+}
+
+.info-card-label {
+    margin-bottom: 8px;
+
+    color: rgba(193, 158, 92, 0.72);
+
+    font-family: var(--font-body);
+    font-size: 0.56rem;
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+}
+
+.inscricao-info-card strong {
+    color: #e9e1d6;
+
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.inscricao-info-card small {
+    margin-top: 6px;
+
+    color: rgba(232, 227, 220, 0.45);
+
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+}
+
+
+/* =========================================================
+   ÁREA DO FORMULÁRIO
+========================================================= */
+
+.inscricoes-form-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 40%,
+            rgba(87, 37, 84, 0.13),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #0a0910,
+            #08070d
+        );
+}
+
+.inscricoes-section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.inscricoes-section-heading .section-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold, #c7a66a);
+
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+}
+
+.inscricoes-section-heading .section-title {
+    margin-bottom: 20px;
+}
+
+.inscricoes-section-heading .section-ornament {
+    display: flex;
+    align-items: center;
+
+    width: 150px;
+
+    margin: 0 auto 25px;
+
+    gap: 12px;
+}
+
+.inscricoes-section-heading .section-ornament span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(193, 158, 92, 0.55)
+        );
+}
+
+.inscricoes-section-heading .section-ornament span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(193, 158, 92, 0.55),
+            transparent
+        );
+}
+
+.inscricoes-section-heading .section-ornament strong {
+    color: var(--gold, #c7a66a);
+}
+
+.inscricoes-section-heading p {
+    margin: 0;
+
+    color: rgba(232, 227, 220, 0.62);
+
+    font-family: var(--font-body);
+    font-size: 0.87rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL DE INSCRIÇÃO
+========================================================= */
+
+.inscricao-form-card {
+    position: relative;
+
+    width: min(780px, 100%);
+
+    margin: 0 auto;
+
+    padding: 70px 70px 58px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(116, 63, 108, 0.25),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(25, 19, 32, 0.98),
+            rgba(11, 9, 16, 0.98)
+        );
+
+    border: 1px solid rgba(193, 158, 92, 0.28);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.28);
+
+    transition:
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.inscricao-form-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(193, 158, 92, 0.07);
+
+    pointer-events: none;
+}
+
+.inscricao-form-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -150px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(118, 57, 108, 0.18),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.inscricao-form-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(193, 158, 92, 0.42);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.34);
+}
+
+
+/* =========================================================
+   DECORAÇÃO DO CARD
+========================================================= */
+
+.inscricao-form-card-decoration {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    width: 150px;
+
+    margin: 0 auto 28px;
+
+    gap: 12px;
+}
+
+.inscricao-form-card-decoration span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(193, 158, 92, 0.55)
+        );
+}
+
+.inscricao-form-card-decoration span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(193, 158, 92, 0.55),
+            transparent
+        );
+}
+
+.inscricao-form-card-decoration strong {
+    color: var(--gold, #c7a66a);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO CARD
+========================================================= */
+
+.inscricao-form-label {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: rgba(193, 158, 92, 0.72);
+
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+.inscricao-form-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #eee6da;
+
+    font-family: var(--font-title);
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    font-weight: 500;
+
+    line-height: 1.12;
+}
+
+.inscricao-form-card p {
+    position: relative;
+    z-index: 2;
+
+    width: min(560px, 100%);
+
+    margin: 24px auto 0;
+
+    color: rgba(232, 227, 220, 0.64);
+
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   BOTÃO DO FORMULÁRIO
+========================================================= */
+
+.inscricao-form-button {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 34px;
+
+    padding: 16px 27px;
+
+    color: #f0e7dc;
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b304f,
+            #3a2037
+        );
+
+    border: 1px solid rgba(193, 158, 92, 0.48);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.inscricao-form-button:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d3c5f,
+            #482841
+        );
+
+    border-color: rgba(193, 158, 92, 0.72);
+
+    box-shadow:
+        0 17px 40px rgba(0, 0, 0, 0.34);
+}
+
+.inscricao-form-button-arrow {
+    color: var(--gold, #c7a66a);
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.inscricao-form-button:hover .inscricao-form-button-arrow {
+    transform: translateX(5px);
+}
+
+.inscricao-form-card small {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-top: 17px;
+
+    color: rgba(232, 227, 220, 0.35);
+
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   ETAPAS DE PARTICIPAÇÃO
+========================================================= */
+
+.inscricoes-steps {
+    position: relative;
+
+    padding: 115px 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 60%,
+            rgba(83, 38, 80, 0.12),
+            transparent 35%
+        ),
+        #08070d;
+}
+
+.inscricoes-steps .inscricoes-section-heading {
+    margin-bottom: 60px;
+}
+
+
+/* =========================================================
+   GRID DAS ETAPAS
+========================================================= */
+
+.inscricoes-steps-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.inscricao-step-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 42px 34px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 16, 27, 0.95),
+            rgba(10, 9, 15, 0.98)
+        );
+
+    border: 1px solid rgba(193, 158, 92, 0.14);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.inscricao-step-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -65px;
+    top: -65px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(193, 158, 92, 0.08);
+}
+
+.inscricao-step-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 34px;
+    right: 34px;
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(193, 158, 92, 0.32),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+.inscricao-step-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(193, 158, 92, 0.3);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.inscricao-step-card:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   NÚMERO DA ETAPA
+========================================================= */
+
+.inscricao-step-number {
+    position: absolute;
+
+    top: 23px;
+    right: 25px;
+
+    color: rgba(193, 158, 92, 0.18);
+
+    font-family: var(--font-title);
+    font-size: 2.6rem;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ÍCONE DA ETAPA
+========================================================= */
+
+.inscricao-step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 32px;
+
+    color: var(--gold, #c7a66a);
+
+    font-size: 1.15rem;
+
+    border: 1px solid rgba(193, 158, 92, 0.24);
+
+    background:
+        rgba(193, 158, 92, 0.04);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   TEXTOS DAS ETAPAS
+========================================================= */
+
+.inscricao-step-card h3 {
+    margin: 0 0 15px;
+
+    color: #e9e1d6;
+
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.inscricao-step-card p {
+    margin: 0;
+
+    color: rgba(232, 227, 220, 0.56);
+
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   CHAMADA FINAL
+========================================================= */
+
+.inscricoes-final {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(103, 47, 101, 0.23),
+            transparent 65%
+        ),
+        #0b0810;
+}
+
+.inscricoes-final::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -260px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: 1px solid rgba(193, 158, 92, 0.08);
+
+    border-radius: 50%;
+}
+
+.inscricoes-final::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -350px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: 1px solid rgba(193, 158, 92, 0.04);
+
+    border-radius: 50%;
+}
+
+.inscricoes-final-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(700px, 100%);
+
+    text-align: center;
+}
+
+.inscricoes-final .section-eyebrow {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--gold, #c7a66a);
+
+    font-family: var(--font-body);
+    font-size: 0.63rem;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+.inscricoes-final h2 {
+    margin: 0 0 22px;
+
+    color: #eee6da;
+
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 6vw, 4.6rem);
+    font-weight: 500;
+
+    line-height: 1.05;
+}
+
+.inscricoes-final h2 span {
+    display: block;
+
+    color: var(--gold, #c7a66a);
+
+    font-style: italic;
+}
+
+.inscricoes-final p {
+    margin: 0;
+
+    color: rgba(232, 227, 220, 0.62);
+
+    font-family: var(--font-body);
+    font-size: 0.87rem;
+
+    line-height: 1.8;
+}
+
+.inscricoes-final .button {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .inscricoes-intro .inscricoes-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(280px, 0.7fr);
+
+        gap: 55px;
+    }
+
+    .inscricoes-steps-grid {
+        gap: 16px;
+    }
+
+    .inscricao-step-card {
+        padding: 35px 27px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 900PX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .inscricoes-intro .inscricoes-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .inscricoes-intro-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .inscricoes-info {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inscricoes-steps-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .inscricao-step-card {
+        min-height: auto;
+
+        padding: 38px 35px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .inscricoes-container {
+        width: min(100% - 28px, 500px);
+    }
+
+
+    /* HERO */
+
+    .inscricoes-hero {
+        min-height: 500px;
+    }
+
+    .inscricoes-hero-content {
+        width: min(100% - 28px, 500px);
+
+        padding-top: 60px;
+    }
+
+    .inscricoes-eyebrow {
+        font-size: 0.57rem;
+
+        letter-spacing: 0.18em;
+    }
+
+    .inscricoes-hero p {
+        font-size: 0.83rem;
+
+        line-height: 1.7;
+    }
+
+    .inscricoes-ornament {
+        width: 145px;
+
+        margin-top: 24px;
+    }
+
+
+    /* INTRO */
+
+    .inscricoes-intro,
+    .inscricoes-form-section,
+    .inscricoes-steps {
+        padding: 80px 0;
+    }
+
+    .inscricoes-highlight {
+        font-size: 1.05rem !important;
+    }
+
+    .inscricoes-intro-content p {
+        font-size: 0.83rem;
+    }
+
+
+    /* INFORMAÇÕES */
+
+    .inscricoes-info {
+        grid-template-columns: 1fr;
+    }
+
+    .inscricao-info-card {
+        min-height: 155px;
+    }
+
+
+    /* CABEÇALHO DA SEÇÃO */
+
+    .inscricoes-section-heading {
+        margin-bottom: 42px;
+    }
+
+    .inscricoes-section-heading p {
+        font-size: 0.82rem;
+    }
+
+
+    /* CARD DO FORMULÁRIO */
+
+    .inscricao-form-card {
+        padding: 50px 24px 42px;
+    }
+
+    .inscricao-form-card::before {
+        inset: 7px;
+    }
+
+    .inscricao-form-card h3 {
+        font-size: clamp(2rem, 10vw, 2.7rem);
+    }
+
+    .inscricao-form-card p {
+        font-size: 0.82rem;
+
+        line-height: 1.8;
+    }
+
+    .inscricao-form-button {
+        width: 100%;
+
+        padding: 16px 20px;
+
+        gap: 15px;
+
+        font-size: 0.63rem;
+    }
+
+    .inscricao-form-card small {
+        font-size: 0.6rem;
+    }
+
+
+    /* ETAPAS */
+
+    .inscricoes-steps-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .inscricao-step-card {
+        min-height: 240px;
+
+        padding: 32px 27px;
+    }
+
+    .inscricao-step-icon {
+        margin-bottom: 25px;
+    }
+
+    .inscricao-step-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .inscricao-step-card p {
+        font-size: 0.79rem;
+    }
+
+
+    /* FINAL */
+
+    .inscricoes-final {
+        min-height: 400px;
+
+        padding: 75px 18px;
+    }
+
+    .inscricoes-final h2 {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+    }
+
+    .inscricoes-final p {
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — 400PX
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .inscricao-form-card {
+        padding: 45px 19px 38px;
+    }
+
+    .inscricao-form-card-decoration {
+        width: 125px;
+    }
+
+    .inscricao-form-label {
+        font-size: 0.53rem;
+
+        letter-spacing: 0.18em;
+    }
+
+    .inscricao-form-card h3 {
+        font-size: 2rem;
+    }
+
+    .inscricao-form-button {
+        font-size: 0.58rem;
+
+        letter-spacing: 0.08em;
+    }
+
+    .inscricao-step-card {
+        padding: 30px 23px;
+    }
+
+}

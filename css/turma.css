@@ -1,0 +1,1245 @@
+/* =========================================================
+   SARAU — NOSSA TURMA
+   Página da turma • IFSP Campus Piracicaba
+========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.turma-container {
+    position: relative;
+    width: min(calc(100% - 64px), 1250px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.turma-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 150px 0 100px;
+    background: #08070b;
+}
+
+.turma-hero-background {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 7, 12, 0.93) 0%,
+            rgba(7, 7, 12, 0.60) 48%,
+            rgba(7, 7, 12, 0.88) 100%
+        );
+}
+
+.turma-hero-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 70% 45%,
+            rgba(102, 53, 101, 0.20),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(5, 5, 9, 0.15),
+            rgba(5, 5, 9, 0.72)
+        );
+}
+
+.turma-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 7, 12, 0.30),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at center,
+            transparent 20%,
+            rgba(4, 4, 8, 0.62) 100%
+        );
+}
+
+.turma-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 460px;
+    height: 460px;
+    right: -180px;
+    top: -150px;
+    border: 1px solid rgba(211, 177, 127, 0.14);
+    border-radius: 50%;
+}
+
+.turma-hero::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 260px;
+    height: 1px;
+    left: 5%;
+    bottom: 90px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(205, 170, 121, 0.55),
+            transparent
+        );
+    transform: rotate(-7deg);
+}
+
+
+/* =========================================================
+   CONTEÚDO HERO
+========================================================= */
+
+.turma-hero-content {
+    position: relative;
+    z-index: 3;
+    width: min(calc(100% - 64px), 920px);
+    text-align: center;
+    color: #eee3d4;
+}
+
+.turma-eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: #cba776;
+}
+
+.turma-hero h1 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: clamp(4.5rem, 9vw, 8rem);
+    font-weight: 500;
+    line-height: 0.90;
+    letter-spacing: 0.01em;
+    color: #f0e5d7;
+    text-shadow: 0 12px 40px rgba(0, 0, 0, 0.70);
+}
+
+.turma-title-decoration {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: min(370px, 80%);
+    margin: 28px auto 25px;
+}
+
+.turma-title-decoration span {
+    flex: 1;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(203, 167, 118, 0.70)
+        );
+}
+
+.turma-title-decoration span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(203, 167, 118, 0.70),
+            transparent
+        );
+}
+
+.turma-title-decoration i {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-style: normal;
+    color: #cba776;
+}
+
+.turma-hero-content p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgba(239, 227, 212, 0.78);
+}
+
+.turma-hero-content strong {
+    color: #f0e5d7;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.turma-intro {
+    position: relative;
+    padding: 145px 0;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(90, 38, 79, 0.15),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #0c0a10 0%,
+            #120c14 100%
+        );
+}
+
+.turma-intro::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -370px;
+    top: 10%;
+    border-radius: 50%;
+    background: #622b55;
+    filter: blur(150px);
+    opacity: 0.11;
+}
+
+.turma-intro .turma-container {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(360px, 0.85fr);
+    align-items: center;
+    gap: 95px;
+}
+
+
+/* =========================================================
+   FOTO DA TURMA
+========================================================= */
+
+.turma-photo-area {
+    position: relative;
+    max-width: 720px;
+}
+
+.turma-photo-frame {
+    position: relative;
+    padding: 13px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(203, 167, 118, 0.32);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.48);
+}
+
+.turma-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: -9px;
+    border: 1px solid rgba(203, 167, 118, 0.12);
+    pointer-events: none;
+}
+
+.turma-photo-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.06),
+            transparent 35%
+        );
+    pointer-events: none;
+}
+
+.turma-photo-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    filter: saturate(0.82) contrast(1.06);
+}
+
+.turma-photo-caption {
+    position: absolute;
+    z-index: 2;
+    right: 25px;
+    bottom: -17px;
+    padding: 8px 18px;
+    background: #130d15;
+    border: 1px solid rgba(203, 167, 118, 0.32);
+    font-family: var(--font-body);
+    font-size: 0.60rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #cba776;
+}
+
+
+/* =========================================================
+   TEXTO INTRO
+========================================================= */
+
+.turma-intro-content {
+    max-width: 560px;
+}
+
+.turma-intro-content .section-label {
+    color: #b894c4;
+}
+
+.turma-intro-content h2 {
+    margin: 15px 0 0;
+    font-family: var(--font-title);
+    font-size: clamp(3.1rem, 5vw, 4.8rem);
+    font-weight: 500;
+    line-height: 0.98;
+    color: #eee2d3;
+}
+
+.turma-divider {
+    width: 105px;
+    height: 1px;
+    margin: 27px 0 30px;
+    background:
+        linear-gradient(
+            90deg,
+            #9d7092,
+            transparent
+        );
+}
+
+.turma-intro-content p {
+    margin: 0 0 18px;
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    line-height: 1.9;
+    color: rgba(235, 222, 209, 0.72);
+}
+
+
+/* =========================================================
+   SEÇÃO DOS ALUNOS
+========================================================= */
+
+.turma-members {
+    position: relative;
+    padding: 145px 0 160px;
+    overflow: hidden;
+    background: #09080d;
+}
+
+.turma-members::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: -300px;
+    top: 18%;
+    border-radius: 50%;
+    background: #3f244a;
+    filter: blur(150px);
+    opacity: 0.12;
+}
+
+.turma-section-heading {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.turma-section-heading .section-label {
+    color: #b994c1;
+}
+
+.turma-section-heading h2 {
+    margin: 14px 0 18px;
+    font-family: var(--font-title);
+    font-size: clamp(3.1rem, 5vw, 4.7rem);
+    font-weight: 500;
+    line-height: 0.98;
+    color: #eee2d3;
+}
+
+.turma-section-heading p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(232, 219, 207, 0.65);
+}
+
+
+/* =========================================================
+   GRID — ALUNOS
+========================================================= */
+
+.members-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.members-grid .member-card:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 75px) / 4);
+    justify-self: center;
+}
+
+
+/* =========================================================
+   CARD DO ALUNO
+========================================================= */
+
+.member-card {
+    position: relative;
+    min-width: 0;
+    min-height: 390px;
+    overflow: hidden;
+    isolation: isolate;
+    background: #100c13;
+    border: 1px solid rgba(203, 167, 118, 0.15);
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(203, 167, 118, 0.42);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================================================
+   FOTO DO ALUNO
+========================================================= */
+
+.member-photo {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.member-photo::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            transparent 30%
+        );
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.member-photo::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(7, 6, 10, 0.02) 20%,
+            rgba(7, 6, 10, 0.10) 42%,
+            rgba(7, 6, 10, 0.72) 76%,
+            rgba(7, 6, 10, 0.98) 100%
+        );
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter:
+        grayscale(0.20)
+        saturate(0.78)
+        brightness(0.82);
+    transform: scale(1.001);
+    transition:
+        transform 0.65s ease,
+        filter 0.65s ease;
+}
+
+.member-card:hover .member-photo img {
+    transform: scale(1.06);
+    filter:
+        grayscale(0.03)
+        saturate(0.96)
+        brightness(0.92);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO ALUNO
+========================================================= */
+
+.member-info {
+    position: absolute;
+    z-index: 4;
+    left: 21px;
+    right: 21px;
+    bottom: 20px;
+}
+
+.member-number {
+    display: block;
+    margin-bottom: 7px;
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    color: #cba776;
+}
+
+.member-info h3 {
+    margin: 0 0 5px;
+    font-family: var(--font-title);
+    font-size: 1.17rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #f0e4d5;
+}
+
+.member-role {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    line-height: 1.4;
+    color: rgba(238, 224, 207, 0.57);
+}
+
+
+/* =========================================================
+   PROFESSORES
+========================================================= */
+
+.turma-teachers {
+    position: relative;
+    padding: 140px 0 155px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(84, 40, 76, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #120c14 0%,
+            #0b090e 100%
+        );
+}
+
+.turma-teachers::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(203, 167, 118, 0.08),
+            transparent
+        );
+}
+
+.teachers-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(300px, 500px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.teacher-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 150px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(203, 167, 118, 0.16);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(203, 167, 118, 0.38);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   FOTO PROFESSOR
+========================================================= */
+
+.teacher-photo {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgba(203, 167, 118, 0.38);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:
+        grayscale(0.16)
+        saturate(0.82);
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.teacher-card:hover .teacher-photo img {
+    transform: scale(1.05);
+    filter:
+        grayscale(0)
+        saturate(0.95);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES PROFESSOR
+========================================================= */
+
+.teacher-info span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b894c4;
+}
+
+.teacher-info h3 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 1.30rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #eee2d3;
+}
+
+
+/* =========================================================
+   FRASE FINAL
+========================================================= */
+
+.turma-final {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(91, 40, 82, 0.28),
+            transparent 55%
+        ),
+        #08070b;
+}
+
+.turma-final::before {
+    content: "";
+    position: absolute;
+    width: 610px;
+    height: 610px;
+    border: 1px solid rgba(203, 167, 118, 0.09);
+    border-radius: 50%;
+}
+
+.turma-final::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(174, 135, 185, 0.07);
+    border-radius: 50%;
+}
+
+.turma-final-content {
+    position: relative;
+    z-index: 2;
+    padding: 45px;
+}
+
+.turma-final-content > span {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #cba776;
+}
+
+.turma-final-content h2 {
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: var(--font-title);
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+    font-weight: 500;
+    line-height: 0.98;
+    color: #eee2d3;
+}
+
+.turma-final-ornament {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 160px;
+    margin: 27px auto;
+}
+
+.turma-final-ornament span {
+    flex: 1;
+    height: 1px;
+    background: rgba(203, 167, 118, 0.48);
+}
+
+.turma-final-ornament i {
+    font-size: 0.9rem;
+    font-style: normal;
+    color: #cba776;
+}
+
+.turma-final-content p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: rgba(232, 220, 207, 0.65);
+}
+
+
+/* =========================================================
+   TELAS MÉDIAS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .turma-intro .turma-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.85fr);
+        gap: 60px;
+    }
+
+    .members-grid {
+        gap: 20px;
+    }
+
+    .member-info {
+        left: 17px;
+        right: 17px;
+        bottom: 18px;
+    }
+
+    .member-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .teachers-grid {
+        grid-template-columns:
+            repeat(2, minmax(280px, 450px));
+    }
+}
+
+
+/* =========================================================
+   TABLET — 2 COLUNAS
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .turma-container {
+        width: calc(100% - 48px);
+    }
+
+    .turma-hero {
+        min-height: 570px;
+        padding: 135px 0 85px;
+    }
+
+    .turma-hero-content {
+        width: calc(100% - 48px);
+    }
+
+    .turma-intro .turma-container {
+        grid-template-columns: 1fr;
+        gap: 75px;
+    }
+
+    .turma-photo-area {
+        width: min(100%, 720px);
+        margin: 0 auto;
+    }
+
+    .turma-intro-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .members-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .members-grid .member-card:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 20px) / 2);
+    justify-self: center;
+}
+
+    .member-card {
+        min-height: 400px;
+    }
+
+    .teachers-grid {
+        grid-template-columns: 1fr;
+        width: min(100%, 550px);
+        margin: 0 auto;
+    }
+
+    .turma-teachers::before {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .turma-container {
+        width: calc(100% - 30px);
+    }
+
+    .turma-hero {
+        min-height: 540px;
+        padding: 125px 0 70px;
+    }
+
+    .turma-hero-content {
+        width: calc(100% - 30px);
+    }
+
+    .turma-hero-background {
+        background-position: 48% center;
+    }
+
+    .turma-hero::before {
+        width: 300px;
+        height: 300px;
+        right: -170px;
+        top: -80px;
+    }
+
+    .turma-hero::after {
+        width: 150px;
+        left: 0;
+        bottom: 55px;
+    }
+
+    .turma-eyebrow {
+        margin-bottom: 15px;
+        font-size: 0.58rem;
+        letter-spacing: 0.19em;
+    }
+
+    .turma-hero h1 {
+        font-size: 3.9rem;
+        line-height: 0.92;
+    }
+
+    .turma-title-decoration {
+        width: 75%;
+        margin: 23px auto 22px;
+    }
+
+    .turma-hero-content p {
+        font-size: 0.86rem;
+        line-height: 1.75;
+    }
+
+    .turma-intro,
+    .turma-members,
+    .turma-teachers {
+        padding: 95px 0 105px;
+    }
+
+    .turma-intro .turma-container {
+        gap: 62px;
+    }
+
+    .turma-photo-frame {
+        padding: 8px;
+    }
+
+    .turma-photo-frame::before {
+        inset: -6px;
+    }
+
+    .turma-photo-caption {
+        right: 10px;
+        bottom: -14px;
+        padding: 7px 11px;
+        font-size: 0.46rem;
+        letter-spacing: 0.13em;
+    }
+
+    .turma-intro-content h2 {
+        font-size: 2.9rem;
+    }
+
+    .turma-intro-content p {
+        font-size: 0.91rem;
+        line-height: 1.8;
+    }
+
+    .turma-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .turma-section-heading h2 {
+        font-size: 2.9rem;
+    }
+
+    .turma-section-heading p {
+        font-size: 0.88rem;
+    }
+
+    .members-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .member-card {
+        min-height: 300px;
+    }
+
+    .member-info {
+        left: 13px;
+        right: 13px;
+        bottom: 14px;
+    }
+
+    .member-number {
+        margin-bottom: 5px;
+        font-size: 0.48rem;
+    }
+
+    .member-info h3 {
+        margin-bottom: 3px;
+        font-size: 0.93rem;
+        line-height: 1.12;
+    }
+
+    .member-role {
+        font-size: 0.56rem;
+    }
+
+    .teachers-grid {
+        width: 100%;
+    }
+
+    .teacher-card {
+        min-height: 120px;
+        gap: 16px;
+        padding: 15px;
+    }
+
+    .teacher-photo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .teacher-info span {
+        margin-bottom: 6px;
+        font-size: 0.50rem;
+    }
+
+    .teacher-info h3 {
+        font-size: 1.08rem;
+    }
+
+    .turma-final {
+        min-height: 410px;
+    }
+
+    .turma-final::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    .turma-final::after {
+        width: 280px;
+        height: 280px;
+    }
+
+    .turma-final-content {
+        padding: 25px;
+    }
+
+    .turma-final-content h2 {
+        font-size: 3rem;
+    }
+
+    .turma-final-content p {
+        font-size: 0.87rem;
+    }
+    .members-grid .member-card:last-child {
+    width: calc((100% - 12px) / 2);
+}
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .turma-hero h1 {
+        font-size: 3.35rem;
+    }
+
+    .members-grid {
+        gap: 9px;
+    }
+
+    .member-card {
+        min-height: 270px;
+    }
+
+    .member-info {
+        left: 10px;
+        right: 10px;
+        bottom: 11px;
+    }
+
+    .member-info h3 {
+        font-size: 0.82rem;
+    }
+
+    .member-role {
+        font-size: 0.51rem;
+    }
+
+    .teacher-card {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .teacher-photo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .teacher-info h3 {
+        font-size: 0.98rem;
+    }
+    .members-grid .member-card:last-child {
+    width: calc((100% - 9px) / 2);
+}
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .member-card,
+    .member-photo img,
+    .teacher-card,
+    .teacher-photo img {
+        transition: none;
+    }
+
+    .member-card:hover {
+        transform: none;
+    }
+
+    .teacher-card:hover {
+        transform: none;
+    }
+}
+
+/* =========================================================
+   PROFESSORES — MESMO CARD DOS ALUNOS
+========================================================= */
+
+.teachers-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 28px;
+
+    justify-content: center;
+
+}
+
+
+/*
+ * Os professores usam exatamente
+ * a mesma estrutura visual dos alunos.
+ */
+
+.teachers-grid .teacher-member-card {
+
+    width: 100%;
+
+}
+
+
+/*
+ * Como existem apenas dois professores,
+ * eles ficam centralizados no grid de 4 colunas.
+ */
+
+.teachers-grid .teacher-member-card:first-child {
+
+    grid-column: 2;
+
+}
+
+.teachers-grid .teacher-member-card:last-child {
+
+    grid-column: 3;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .teachers-grid {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .teachers-grid .teacher-member-card:first-child {
+
+        grid-column: 1;
+
+    }
+
+    .teachers-grid .teacher-member-card:last-child {
+
+        grid-column: 2;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET MENOR
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .teachers-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+    .teachers-grid .teacher-member-card:first-child {
+
+        grid-column: 1;
+
+    }
+
+    .teachers-grid .teacher-member-card:last-child {
+
+        grid-column: 2;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .teachers-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .teachers-grid .teacher-member-card:first-child,
+    .teachers-grid .teacher-member-card:last-child {
+
+        grid-column: auto;
+
+    }
+
+}
